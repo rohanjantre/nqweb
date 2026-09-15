@@ -4,6 +4,9 @@ const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const connectDB = require("./config/db");
 const contactRoutes = require("./routes/contactRoutes");
+const dns = require("dns");
+
+dns.setDefaultResultOrder("ipv4first");
 
 const app = express();
 
@@ -15,6 +18,7 @@ app.use(
   })
 );
 
+//console.log("MONGO_URI exists:", !!process.env.MONGO_URI);
 // Basic rate limiting on the contact endpoint to prevent spam/abuse
 const contactLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
