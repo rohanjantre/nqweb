@@ -1,0 +1,1682 @@
+/* =====================================================
+   NOVIQWEB — ABOUT PAGE
+   Premium / Modern / Animated
+===================================================== */
+
+.about-page {
+    overflow: hidden;
+    background: #ffffff;
+    color: #101828;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.about-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.about-hero {
+    position: relative;
+
+    min-height: 820px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 75% 45%,
+            rgba(37, 99, 235, 0.12),
+            transparent 30%),
+        linear-gradient(135deg,
+            #ffffff,
+            #f8fafc 60%,
+            #eef4ff);
+}
+
+
+/* =====================================================
+   HERO GRID
+===================================================== */
+
+.about-hero-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.4;
+
+    background-image:
+        linear-gradient(rgba(15, 23, 42, 0.045) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(15, 23, 42, 0.045) 1px,
+            transparent 1px);
+
+    background-size: 55px 55px;
+
+    mask-image:
+        linear-gradient(to right,
+            black,
+            transparent 90%);
+}
+
+
+/* =====================================================
+   GLOW
+===================================================== */
+
+.about-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    pointer-events: none;
+}
+
+.about-glow-one {
+    top: 10%;
+    right: -180px;
+
+    background: rgba(37, 99, 235, 0.18);
+
+    animation: aboutGlowMove 8s ease-in-out infinite;
+}
+
+.about-glow-two {
+    bottom: -250px;
+    left: -180px;
+
+    background: rgba(99, 102, 241, 0.08);
+
+    animation: aboutGlowMove 10s ease-in-out infinite reverse;
+}
+
+@keyframes aboutGlowMove {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-25px, 25px);
+    }
+
+}
+
+
+/* =====================================================
+   HERO INNER
+===================================================== */
+
+.about-hero-inner {
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   HERO COPY
+===================================================== */
+
+.about-hero-copy {
+    animation:
+        aboutHeroText 1s ease forwards;
+}
+
+@keyframes aboutHeroText {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.about-eyebrow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.about-eyebrow-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    box-shadow:
+        0 0 18px rgba(37, 99, 235, 0.7);
+
+    animation: eyebrowPulse 2s infinite;
+}
+
+@keyframes eyebrowPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 10px rgba(37, 99, 235, 0.5);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px rgba(37, 99, 235, 0.9);
+    }
+
+}
+
+.about-eyebrow p {
+    margin: 0;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.13em;
+
+    color: #475467;
+}
+
+
+/* =====================================================
+   HERO TITLE
+===================================================== */
+
+.about-hero-copy h1 {
+    max-width: 700px;
+
+    margin: 0;
+
+    font-size:
+        clamp(48px,
+            6vw,
+            76px);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+
+    font-weight: 800;
+}
+
+.about-hero-copy h1 span {
+    display: inline;
+
+    background:
+        linear-gradient(110deg,
+            #101828,
+            #2563eb,
+            #6366f1);
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        aboutGradient 5s linear infinite;
+}
+
+@keyframes aboutGradient {
+
+    0% {
+        background-position: 0 center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+
+}
+
+
+/* =====================================================
+   HERO SUB
+===================================================== */
+
+.about-hero-sub {
+    max-width: 620px;
+
+    margin: 30px 0 0;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    color: #667085;
+}
+
+
+/* =====================================================
+   HERO META
+===================================================== */
+
+.about-hero-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.meta-line {
+    width: 45px;
+    height: 1px;
+
+    background: #2563eb;
+}
+
+.about-hero-meta p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.about-hero-meta span {
+    color: #2563eb;
+
+    margin: 0 5px;
+}
+
+
+/* =====================================================
+   HERO VISUAL
+===================================================== */
+
+.about-hero-visual {
+    min-height: 580px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation:
+        aboutVisualIn 1.2s ease forwards;
+}
+
+@keyframes aboutVisualIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0) scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   ORBITS
+===================================================== */
+
+.about-orbit {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(37, 99, 235, 0.15);
+}
+
+.about-orbit-one {
+    width: 430px;
+    height: 430px;
+
+    animation:
+        aboutOrbit 20s linear infinite;
+}
+
+.about-orbit-two {
+    width: 590px;
+    height: 590px;
+
+    border-style: dashed;
+
+    animation:
+        aboutOrbit 30s linear infinite reverse;
+}
+
+@keyframes aboutOrbit {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   MAIN ORB
+===================================================== */
+
+.about-main-orb {
+    position: relative;
+
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        conic-gradient(from 0deg,
+            #101828,
+            #2563eb,
+            #6366f1,
+            #101828);
+
+    box-shadow:
+        0 50px 100px rgba(16, 24, 40, 0.2);
+
+    animation:
+        mainOrbFloat 6s ease-in-out infinite;
+}
+
+@keyframes mainOrbFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px) rotate(4deg);
+    }
+
+}
+
+
+.about-main-orb::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 3px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 30% 25%,
+            #344054,
+            #101828 55%,
+            #050b16);
+}
+
+
+/* =====================================================
+   ORB INNER
+===================================================== */
+
+.orb-inner {
+    position: relative;
+
+    width: 310px;
+    height: 310px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    z-index: 2;
+}
+
+.orb-label {
+    position: absolute;
+
+    top: 55px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.25em;
+
+    color: #98a2b3;
+}
+
+.orb-center {
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(135deg,
+            #2563eb,
+            #6366f1);
+
+    font-size: 55px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.08em;
+
+    box-shadow:
+        0 20px 60px rgba(37, 99, 235, 0.4);
+
+    animation:
+        orbCenterPulse 4s ease-in-out infinite;
+}
+
+@keyframes orbCenterPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 20px 60px rgba(37, 99, 235, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 20px 90px rgba(37, 99, 235, 0.6);
+    }
+
+}
+
+.orb-bottom {
+    position: absolute;
+
+    bottom: 55px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.22em;
+
+    color: #667085;
+}
+
+
+/* =====================================================
+   FLOATING CARDS
+===================================================== */
+
+.about-floating {
+    position: absolute;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 50px rgba(16, 24, 40, 0.12);
+
+    animation:
+        floatingCard 4s ease-in-out infinite;
+}
+
+.about-floating span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
+
+    background: #eef4ff;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+.about-floating p {
+    margin: 0;
+
+    color: #344054;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.about-floating-one {
+    top: 17%;
+    left: 0;
+}
+
+.about-floating-two {
+    right: 0;
+    bottom: 15%;
+
+    animation-delay: 1s;
+}
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+.about-scroll {
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #98a2b3;
+
+    z-index: 10;
+}
+
+.about-scroll span {
+    position: relative;
+
+    width: 20px;
+    height: 30px;
+
+    border:
+        1px solid #98a2b3;
+
+    border-radius: 20px;
+}
+
+.about-scroll span::after {
+    content: "";
+
+    position: absolute;
+
+    top: 6px;
+    left: 50%;
+
+    width: 3px;
+    height: 6px;
+
+    border-radius: 10px;
+
+    background: #667085;
+
+    transform: translateX(-50%);
+
+    animation:
+        aboutScrollDot 1.7s infinite;
+}
+
+@keyframes aboutScrollDot {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(-50%, 0);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, 10px);
+    }
+
+}
+
+.about-scroll p {
+    margin: 0;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   BELIEF SECTION
+===================================================== */
+
+.about-belief {
+    padding: 140px 0;
+    background: white;
+}
+
+.belief-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.85fr 1fr;
+
+    gap: 120px;
+
+    align-items: start;
+}
+
+.about-section-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+.belief-heading h2 {
+    margin: 0;
+
+    max-width: 500px;
+
+    font-size:
+        clamp(40px,
+            5vw,
+            62px);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+}
+
+.belief-heading h2 span {
+    color: #98a2b3;
+}
+
+.belief-copy {
+    max-width: 600px;
+
+    padding-top: 20px;
+}
+
+.belief-copy p {
+    color: #667085;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin: 0 0 25px;
+}
+
+.belief-copy .belief-large {
+    color: #101828;
+
+    font-size: 25px;
+
+    line-height: 1.5;
+
+    letter-spacing: -0.025em;
+}
+
+.belief-signature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 45px;
+}
+
+.signature-line {
+    width: 45px;
+    height: 1px;
+
+    background: #101828;
+}
+
+.belief-signature span {
+    color: #98a2b3;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   PRINCIPLES
+===================================================== */
+
+.principles-section {
+    padding: 130px 0;
+
+    background: #f8fafc;
+}
+
+.principles-head {
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.6fr;
+
+    gap: 60px;
+
+    align-items: end;
+
+    margin-bottom: 60px;
+}
+
+.principles-head h2 {
+    margin: 0;
+
+    font-size:
+        clamp(40px,
+            5vw,
+            62px);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+}
+
+.principles-head h2 span {
+    color: #98a2b3;
+}
+
+.principles-head>p {
+    margin: 0;
+
+    color: #667085;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   VALUES GRID
+===================================================== */
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   VALUE CARD
+===================================================== */
+
+.value-card {
+    position: relative;
+
+    min-height: 370px;
+
+    padding: 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border:
+        1px solid #eaecf0;
+
+    border-radius: 25px;
+
+    background: white;
+
+    overflow: hidden;
+
+    animation:
+        valueCardIn 0.8s ease both;
+
+    animation-delay:
+        var(--card-delay);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+@keyframes valueCardIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+.value-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    top: -100px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: #eef4ff;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.value-card:hover::before {
+    transform: scale(2.2);
+}
+
+.value-card:hover {
+    transform:
+        translateY(-10px);
+
+    border-color: #d0d5dd;
+
+    box-shadow:
+        0 30px 70px rgba(16, 24, 40, 0.1);
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.value-card-top {
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.value-number {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #98a2b3;
+}
+
+.value-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #101828;
+
+    color: white;
+
+    font-size: 17px;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.value-card:hover .value-icon {
+    transform:
+        rotate(8deg) scale(1.1);
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.value-card-content {
+    position: relative;
+
+    margin-top: auto;
+
+    margin-bottom: 60px;
+}
+
+.value-card-content h3 {
+    margin: 0 0 15px;
+
+    font-size: 23px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.035em;
+}
+
+.value-card-content p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   CARD BOTTOM
+===================================================== */
+
+.value-card-bottom {
+    position: absolute;
+
+    left: 32px;
+    right: 32px;
+    bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.value-line {
+    height: 1px;
+
+    flex: 1;
+
+    background: #eaecf0;
+
+    margin-right: 15px;
+}
+
+.value-arrow {
+    color: #101828;
+
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.value-card:hover .value-arrow {
+    transform:
+        translate(5px, -5px);
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.about-process {
+    padding: 120px 0;
+
+    background: #080d19;
+
+    color: white;
+}
+
+.process-inner {
+    display: grid;
+
+    grid-template-columns:
+        0.15fr 1fr 0.7fr;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+.process-number {
+    font-size: 12px;
+
+    color: #60a5fa;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+.process-content>span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #667085;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+.process-content h2 {
+    margin: 0;
+
+    font-size:
+        clamp(42px,
+            5vw,
+            68px);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+}
+
+.process-description {
+    padding-top: 35px;
+}
+
+.process-description p {
+    margin: 0;
+
+    color: #98a2b3;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+.process-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 30px;
+}
+
+.process-tags span {
+    padding: 8px 12px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 50px;
+
+    color: #d0d5dd;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.about-final-cta {
+    padding: 100px 0;
+
+    background: #f8fafc;
+}
+
+.final-cta-box {
+    position: relative;
+
+    min-height: 500px;
+
+    padding: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    background: #101828;
+
+    box-shadow:
+        0 40px 100px rgba(16, 24, 40, 0.18);
+}
+
+.final-cta-content {
+    position: relative;
+
+    max-width: 650px;
+
+    z-index: 5;
+}
+
+.final-cta-content .about-section-label {
+    color: #60a5fa;
+}
+
+.final-cta-content h2 {
+    margin: 0;
+
+    font-size:
+        clamp(42px,
+            6vw,
+            70px);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+
+    color: white;
+}
+
+.final-cta-content h2 span {
+    color: #667085;
+}
+
+.final-cta-content p {
+    max-width: 550px;
+
+    margin: 25px 0 35px;
+
+    color: #98a2b3;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+===================================================== */
+
+.about-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 22px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #101828;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-cta-button:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.about-cta-button span:last-child {
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.about-cta-button:hover span:last-child {
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =====================================================
+   CTA DECORATION
+===================================================== */
+
+.final-cta-decoration {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.final-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.2);
+}
+
+.final-ring-one {
+    width: 300px;
+    height: 300px;
+
+    animation:
+        finalRingRotate 18s linear infinite;
+}
+
+.final-ring-two {
+    width: 500px;
+    height: 500px;
+
+    border-style: dashed;
+
+    animation:
+        finalRingRotate 25s linear infinite reverse;
+}
+
+.final-dot {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 30% 25%,
+            #60a5fa,
+            #2563eb 50%,
+            #312e81);
+
+    box-shadow:
+        0 0 100px rgba(37, 99, 235, 0.65);
+
+    animation:
+        finalDotPulse 4s ease-in-out infinite;
+}
+
+@keyframes finalRingRotate {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes finalDotPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .about-hero {
+        padding: 110px 0 100px;
+    }
+
+    .about-hero-inner {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .about-eyebrow {
+        justify-content: center;
+    }
+
+    .about-hero-copy h1 {
+        margin: auto;
+    }
+
+    .about-hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-hero-meta {
+        justify-content: center;
+    }
+
+    .about-hero-visual {
+        min-height: 520px;
+    }
+
+    .belief-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .principles-head {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card {
+        min-height: 320px;
+    }
+
+    .process-inner {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .process-number {
+        display: none;
+    }
+
+    .process-description {
+        padding-top: 10px;
+    }
+
+    .final-cta-box {
+        padding: 60px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        min-height: auto;
+
+        padding:
+            100px 0 80px;
+    }
+
+    .about-hero-copy h1 {
+        font-size: 46px;
+    }
+
+    .about-hero-sub {
+        font-size: 16px;
+    }
+
+    .about-hero-visual {
+        min-height: 400px;
+
+        transform:
+            scale(0.78);
+    }
+
+    .about-main-orb {
+        width: 330px;
+        height: 330px;
+    }
+
+    .orb-inner {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about-orbit-one {
+        width: 380px;
+        height: 380px;
+    }
+
+    .about-orbit-two {
+        width: 450px;
+        height: 450px;
+    }
+
+    .about-floating-one {
+        left: -5px;
+    }
+
+    .about-floating-two {
+        right: -5px;
+    }
+
+    .about-scroll {
+        display: none;
+    }
+
+
+    .about-belief {
+        padding: 90px 0;
+    }
+
+    .belief-heading h2 {
+        font-size: 43px;
+    }
+
+    .belief-copy .belief-large {
+        font-size: 22px;
+    }
+
+
+    .principles-section {
+        padding: 90px 0;
+    }
+
+    .principles-head h2 {
+        font-size: 43px;
+    }
+
+
+    .value-card {
+        min-height: 320px;
+
+        padding: 27px;
+    }
+
+
+    .about-process {
+        padding: 90px 0;
+    }
+
+    .process-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .process-content h2 {
+        font-size: 48px;
+    }
+
+
+    .about-final-cta {
+        padding: 70px 0;
+    }
+
+    .final-cta-box {
+        min-height: 550px;
+
+        padding: 45px 30px;
+
+        align-items: flex-start;
+    }
+
+    .final-cta-content h2 {
+        font-size: 46px;
+    }
+
+    .final-cta-decoration {
+        right: -300px;
+        bottom: -100px;
+
+        opacity: 0.65;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCE MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

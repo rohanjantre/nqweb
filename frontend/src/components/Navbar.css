@@ -1,0 +1,680 @@
+/* =========================================================
+   PREMIUM NAVBAR
+========================================================= */
+
+.premium-navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+
+    padding:
+        18px 0;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    border-bottom:
+        1px solid rgba(16, 24, 40, 0.07);
+
+    animation:
+        navbarReveal 0.8s ease forwards;
+}
+
+
+@keyframes navbarReveal {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   NAVBAR INNER
+========================================================= */
+
+.navbar-inner {
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.premium-brand {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: #101828;
+
+    text-decoration: none;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   BRAND MARK
+========================================================= */
+
+.premium-brand-mark {
+    position: relative;
+
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(135deg,
+            #101828,
+            #2563eb);
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.2);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.premium-brand-mark::before {
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    top: -45px;
+    left: -45px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.2);
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.premium-brand:hover .premium-brand-mark {
+    transform:
+        translateY(-2px) rotate(-3deg);
+
+    box-shadow:
+        0 12px 35px rgba(37, 99, 235, 0.35);
+}
+
+
+.premium-brand:hover .premium-brand-mark::before {
+    transform:
+        translate(30px, 30px);
+}
+
+
+.premium-brand-mark span {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BRAND NAME
+========================================================= */
+
+.premium-brand-name {
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.045em;
+}
+
+
+.premium-brand-name span {
+    background:
+        linear-gradient(100deg,
+            #2563eb,
+            #6366f1);
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color: transparent;
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.premium-nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.nav-link {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        10px 13px;
+
+    color: #667085;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 13px;
+    right: 13px;
+
+    bottom: 3px;
+
+    height: 2px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(90deg,
+            #2563eb,
+            #6366f1);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        center;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.nav-link:hover {
+    color: #101828;
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform:
+        scaleX(1);
+}
+
+
+.nav-link.active {
+    color: #101828;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   NAV CTA
+========================================================= */
+
+.premium-nav-cta {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    padding:
+        11px 16px;
+
+    border-radius: 10px;
+
+    background: #101828;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(16, 24, 40, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.premium-nav-cta::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(100deg,
+            #101828,
+            #2563eb,
+            #6366f1);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+}
+
+
+.premium-nav-cta:hover::before {
+    opacity: 1;
+}
+
+
+.premium-nav-cta:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 35px rgba(37, 99, 235, 0.25);
+}
+
+
+.premium-nav-cta span {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.premium-nav-arrow {
+    font-size: 15px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.premium-nav-cta:hover .premium-nav-arrow {
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+
+.premium-nav-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border:
+        1px solid #eaecf0;
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 100;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.premium-nav-toggle:hover {
+    border-color: #2563eb;
+}
+
+
+.premium-nav-toggle span {
+    position: absolute;
+
+    left: 50%;
+
+    width: 18px;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #101828;
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.3s ease,
+        top 0.35s ease;
+}
+
+
+.premium-nav-toggle span:nth-child(1) {
+    top: 13px;
+}
+
+
+.premium-nav-toggle span:nth-child(2) {
+    top: 19px;
+}
+
+
+.premium-nav-toggle span:nth-child(3) {
+    top: 25px;
+}
+
+
+/* =========================================================
+   HAMBURGER OPEN
+========================================================= */
+
+.premium-nav-toggle.is-open span:nth-child(1) {
+    top: 19px;
+
+    transform:
+        translateX(-50%) rotate(45deg);
+}
+
+
+.premium-nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.premium-nav-toggle.is-open span:nth-child(3) {
+    top: 19px;
+
+    transform:
+        translateX(-50%) rotate(-45deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .premium-nav-links {
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding:
+            9px 9px;
+    }
+
+    .premium-nav-cta {
+        padding:
+            10px 13px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .premium-navbar {
+        padding:
+            13px 0;
+    }
+
+
+    .navbar-inner {
+        width: 92%;
+    }
+
+
+    .premium-nav-toggle {
+        display: block;
+    }
+
+
+    .premium-nav-links {
+        position: absolute;
+
+        top: calc(100% + 10px);
+
+        left: 4%;
+
+        width: 92%;
+
+        padding: 15px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 15px;
+
+        border:
+            1px solid rgba(16, 24, 40, 0.08);
+
+        border-radius: 20px;
+
+        background:
+            rgba(255, 255, 255, 0.94);
+
+        backdrop-filter:
+            blur(25px);
+
+        -webkit-backdrop-filter:
+            blur(25px);
+
+        box-shadow:
+            0 25px 70px rgba(16, 24, 40, 0.14);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform:
+            translateY(-12px) scale(0.98);
+
+        transform-origin:
+            top center;
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            transform 0.3s ease;
+    }
+
+
+    .premium-nav-links.is-open {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateY(0) scale(1);
+    }
+
+
+    .nav-menu {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+
+    .nav-link {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding:
+            13px 14px;
+
+        border-radius: 10px;
+
+        font-size: 13px;
+    }
+
+
+    .nav-link:hover {
+        background: #f8fafc;
+    }
+
+
+    .nav-link::after {
+        display: none;
+    }
+
+
+    .nav-link.active {
+        color: #2563eb;
+
+        background: #eef4ff;
+    }
+
+
+    .premium-nav-cta {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding:
+            14px 16px;
+
+        justify-content: space-between;
+
+        border-radius: 11px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .premium-brand-name {
+        font-size: 17px;
+    }
+
+    .premium-brand-mark {
+        width: 36px;
+        height: 36px;
+    }
+
+}
